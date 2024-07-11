@@ -24,7 +24,7 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
         className="pointer-events-none z-50 select-none"
       />
       <div className="absolute -z-10 inset-0">
-        <img className="object-cover" src={imgSrc}/>
+        <img className="object-cover min-w-full min-h-full" src={imgSrc} />
       </div>
     </div>
   );
