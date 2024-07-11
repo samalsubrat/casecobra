@@ -96,13 +96,13 @@ export default function Home() {
             <div className="relative md:max-w-xl">
               <img
                 src="/your-image.png"
-                className="absolute w-40 lg:w-52 left-52 -top-20  select-none hidden sm:block lg:hidden xl:block"
+                className="absolute w-40 lg:w-52 left-52 -top-20  select-none hidden sm:block lg:hidden xl:block xl:left-48 2xl:left-56"
               />
               <img
                 src="/line.png"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
               />
-              <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
+              <Phone className="w-64 bg-slate-50" imgSrc="/testimonials/1.jpg" />
             </div>
           </div>
         </MaxWidthWrapper>
