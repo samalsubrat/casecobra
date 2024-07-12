@@ -5,13 +5,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
+import { constructMetadata } from "@/lib/utils";
 
 const inter = Space_Grotesk({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "CaseCobra",
-  description: "Your Image on a Custom Phone Case.",
-};
+export const metadata = constructMetadata()
 
 export default function RootLayout({
   children,
