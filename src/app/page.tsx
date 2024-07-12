@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { ArrowRight, Check, Star } from "lucide-react";
 import Phone from "@/components/Phone";
@@ -8,7 +10,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="bg-slate-50">
+    <div className="bg-slate-50 grainy-light">
       <section>
         <MaxWidthWrapper className="pb-23 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
@@ -92,7 +94,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
+          <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit max-sm:mb-20 max-sm:mt-20">
             <div className="relative md:max-w-xl">
               <img
                 src="/your-image.png"
@@ -141,7 +143,7 @@ export default function Home() {
                   pocket and that led to some pretty heavy scratch marks on all
                   of my last phone cases. This one, besides a barely noticeable
                   scratch on the corner,{" "}
-                  <span className="p-0.5 bg-slate-800 text-white">
+                  <span className="p-0.5 bg-green-800 text-white">
                     looks brand new after about half a year
                   </span>
                   . I dig it. &quot;
@@ -176,7 +178,7 @@ export default function Home() {
                 <p>
                   &quot; The case feels durable and I even got a compliment on
                   the design. Had the case and a half months now and{" "}
-                  <span className="p-0.5 bg-slate-800 text-white">
+                  <span className="p-0.5 bg-green-800 text-white">
                     the image is super clear
                   </span>
                   , on the case I had before, the image started fading into
