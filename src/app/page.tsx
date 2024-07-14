@@ -95,11 +95,13 @@ export default function Home() {
           </div>
 
           <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit max-sm:mb-20 max-sm:mt-20">
-            <div className="relative md:max-w-xl">
+            <div className="relative md:max-w-xl ">
+              <div className="overflow-x-hidden">
               <img
                 src="/your-image.png"
-                className="absolute w-40 lg:w-52 left-52 -top-20  select-none hidden sm:block lg:hidden xl:block xl:left-48 2xl:left-56"
+                className="absolute w-40 lg:w-52 left-48 -top-20 select-none hidden sm:block lg:hidden xl:block xl:left-48 2xl:left-52 overflow-x-hidden"
               />
+              </div>
               <img
                 src="/line.png"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
