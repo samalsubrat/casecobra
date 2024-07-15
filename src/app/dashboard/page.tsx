@@ -33,6 +33,7 @@ const Page = async () => {
 
   const orders = await db.order.findMany({
     where: {
+      isPaid: true,
       createdAt: {
         gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
@@ -48,7 +49,7 @@ const Page = async () => {
 
   const lastWeekSum = await db.order.aggregate({
     where: {
-      isPaid:true,
+      isPaid: true,
       createdAt: {
         gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
@@ -60,7 +61,7 @@ const Page = async () => {
 
   const lastMonthSum = await db.order.aggregate({
     where: {
-      isPaid:true,
+      isPaid: true,
       createdAt: {
         gte: new Date(new Date().setDate(new Date().getDate() - 30)),
       },
@@ -70,10 +71,8 @@ const Page = async () => {
     },
   })
 
-  const WEEKLY_GOAL = 100
-  const MONTHLY_GOAL = 1000
-
-  
+  const WEEKLY_GOAL = 500
+  const MONTHLY_GOAL = 2500
 
   return (
     <div className='flex min-h-screen w-full bg-muted/40'>
@@ -129,7 +128,6 @@ const Page = async () => {
                   Purchase date
                 </TableHead>
                 <TableHead className='text-right'>Amount</TableHead>
-                <TableHead className='text-right'>Paid</TableHead>
               </TableRow>
             </TableHeader>
 
@@ -152,9 +150,6 @@ const Page = async () => {
                   </TableCell>
                   <TableCell className='text-right'>
                     {formatPrice(order.amount)}
-                  </TableCell>
-                  <TableCell className='text-right'>
-                    {order.isPaid ? "Yes" : "No"}
                   </TableCell>
                 </TableRow>
               ))}

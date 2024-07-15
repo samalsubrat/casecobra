@@ -1,16 +1,17 @@
-import { type ClassValue, clsx } from "clsx"
-import { Metadata } from "next"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from 'clsx'
+import { Metadata } from 'next'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
 export const formatPrice = (price: number) => {
-  const formatter = new Intl.NumberFormat("en-US", {
+  const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
   })
+
   return formatter.format(price)
 }
 
@@ -38,9 +39,9 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@subratsamal',
+      creator: '@joshtriedcoding',
     },
     icons,
-    metadataBase: new URL("https://casecobra-project.vercel.app/")
+    metadataBase: new URL("https://casecobra.vercel.app/")
   }
 }

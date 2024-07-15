@@ -64,8 +64,8 @@ model Order {
   id              String        @id @default(cuid())
   configurationId String
   configuration   Configuration @relation(fields: [configurationId], references: [id])
-  user            User          @relation(fields: [userUser], references: [id])
-  userUser        String
+  user            User          @relation(fields: [userId], references: [id])
+  userId          String
   amount          Float
   isPaid          Boolean       @default(false)
   status          OrderStatus   @default(awaiting_shipment)
@@ -76,8 +76,7 @@ model Order {
   billingAddressId  String?
 
   createdAt DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  
+  updated   DateTime @updatedAt
 }
 
 model ShippingAddress {
