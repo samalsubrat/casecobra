@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
 import { constructMetadata } from "@/lib/utils";
 
-const inter = Space_Grotesk({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = constructMetadata()
 
