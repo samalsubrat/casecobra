@@ -5,7 +5,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 grainy-light">
+    <div className="bg-slate-50 grainy-light overflow-x-hidden">
       <MaxWidthWrapper>
         <Hero />
       </MaxWidthWrapper>
